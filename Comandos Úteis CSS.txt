@@ -1,0 +1,293 @@
+CSS:
+*Fundamentos do CSS*
+Para mais informações veja os Links : https://www.w3schools.com/css/default.asp , https://www.alura.com.br/artigos/css-seletores-avancados-aplicacoes-web?utm_term=&utm_campaign=%5BSearch%5D+%5BPerformance%5D+-+Dynamic+Search+Ads+-+Artigos+e+Conteúdos&utm_source=adwords&utm_medium=ppc&hsa_acc=7964138385&hsa_cam=11384329873&hsa_grp=111087461203&hsa_ad=682526577071&hsa_src=g&hsa_tgt=dsa-843358956400&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=EAIaIQobChMI3Ie27JCUgwMVG1VIAB0JBAA3EAAYASAAEgJecfD_BwE
+
+>> Formas de Declaração do CSS:
+CSS Inline -> Adicionamos o código CSS utilizando o atributo style="" dentro das Tags HTML, elemento por elemento.
+CSS Interno -> Código CSS é adicionado dentro da Tag <head> da página HTML. Dentro da Tag <head> adicionamos outa Tag, a <style>, e colocamos as regras CSS nessa área.
+CSS Externo -> É criado um arquivo com a extensão .css com todas as regras CSS que queremos aplicar e esse arquivo é referenciado no HTML da página através da Tag <link>.
+
+>> Seletores:
+
+>>> Seletor de Tags:
+O seletor de tag é o mais simples de todos. Ele seleciona todos os elementos de uma determinada tag. Por exemplo, p { color: blue; } irá colorir de azul todos os parágrafos da sua página.
+
+>>> Seletores de ID:
+O seletor de ID é como um foco preciso em um único elemento que possui um ID específico. O exemplo #unico { background-color: yellow; } irá mudar o plano de fundo do elemento com o ID unico para amarelo.
+
+>>> Seletor de Classes:
+O seletor de classe seleciona elementos com base na classe CSS que possuem. Com ele, podemos estilizar qualquer número de elementos de maneira consistente. Veja que .exemplo { font-size: 20px; } irá afetar todos os elementos com a classe exemplo.
+
+>>> Seletores Universais:
+O seletor universal * pode afetar todos os elementos da sua página. Use-o com sabedoria.
+
+>>> Seletores de Atributo:
+O seletor de atributo seleciona elementos baseados nos atributos que eles possuem. Por exemplo,a[target="_blank"] { color: red; } irá colorir de vermelho todos os links que abrem em uma nova aba.
+
+>> Combinadores:
+
+>>> Agrupamento de Setores:
+Link: http://www.linhadecodigo.com.br/artigo/276/agrupando-seletores-em-uma-regra-css.asp
+
+>>> Combinador Descendente:
+O combinador de descendente (espaço) é o mais generoso, selecionando todos os elementos que são descendentes do primeiro, sejam filhos diretos ou não.
+	>> exemplo: div p {
+		      color: blue;
+		    }
+		    <div>
+		      <p>Este parágrafo será azul.</p>
+		      <span><p>Este parágrafo também será azul, mesmo não sendo um filho direto do div.</p></span>
+		    </div>
+
+>>> Combinador Filho:
+O combinador de filho > seleciona apenas os elementos que são filhos diretos do primeiro elemento.
+	>> exemplo: div > p {
+		      color: blue;
+		    }
+		    <div>
+		      <p>Este parágrafo será azul.</p>
+		      <span><p>Este parágrafo não será azul, pois não é um filho direto do div.</p></span>
+		    </div>
+
+>>> Combinador Irmão:
+Combinador Irmão Adjacente -> O combinador irmão adjacente + seleciona o elemento que vem imediatamente depois do primeiro elemento.
+	>> exemplo: h2 + p {
+		      color: green;
+		    }
+		    <h2>Título</h2>
+		    <p>Este parágrafo será verde.</p>
+		    <p>Este parágrafo não será afetado.</p>
+Combinador Irmão Geral -> O combinador irmão geral ~ é mais abrangente, selecionando todos os elementos que seguem o primeiro.
+	>> exemplo: h2 ~ p {
+		      color: green;
+		    }
+		    <h2>Título</h2>
+		    <p>Este parágrafo será verde.</p>
+		    <p>Este parágrafo também será verde.</p>
+
+>>> Largura e Altura:
+width -> Altera a largura, pode ser por exemplo: 'width: auto' que define automaticamente a largura; 'width: initial' que aplica o valor padrão da propriedade; 'width: inherit' que define o valor da propriedade de acordo com o seu elemento pai
+height -> Altera a altura, pode ser por exemplo: 'height: auto' que define automaticamente a altura; 'height: initial' que aplica o valor padrão da propriedade; 'height: inherit' que define o valor da propriedade de acordo com o seu elemento pai
+PS: auto, initial e inherit podem ser usados em outras propriedades do CSS
+
+>>> Altura e Largura Máxima e Mínima:
+max-width -> Define a largura máxima
+min-width -> Define a largura mínima
+min-height -> Define a altura mínima
+max-height -> Define a altura máxima
+
+>>> Margin:
+A propriedade margin do CSS define a área de margem nos quatro lados do elemento. É uma abreviação que define todas as margens individuais de uma só vez: margin-top, margin-right, margin-bottom, e margin-left.
+Quando um valor é especificado, a mesma margem é aplicada para todos os quatro lados.
+Quando dois valores são especificados, a primeira margem é aplicada aos lados superior e inferior, e a segunda aos lados esquerdo e direito.
+Quando três valores são especificados, a primeira margem é apliacada ao topo, a segunda aos lados esquerdo e direito, e a terceira ao lado inferior.
+Quando quatro valores são especificados, as margens são aplicadas aos lados superior, direito, inferior e esquerdo, nesta ordem (sentido horário).
+margin: auto -> centraliza na vertical o elemento
+Link: https://developer.mozilla.org/pt-BR/docs/Web/CSS/margin#especificações
+
+>>> Padding:
+A propriedade padding define uma a distância entre o conteúdo de um elemento e suas bordas. É um atalho que evita definir uma distância para cada lado separadamente (padding-top, padding-right, padding-bottom, padding-left).
+Quando um único é valor utilizado, ele se aplica a todos os quatro lados.
+Se Dois valores forem utilizados o primeiro se aplica às bordas verticais (superior e inferior) e o segundo se aplica às bordas horizontais (esquerda e direita).
+Quando Três valores são utilizados o primeiro se aplica à borda superior, o segundo será utilizado tanto para a borda esquerda quanto para a borda direita. O terceiro será aplicado à borda inferior.
+Com Quatro valores a ordem de aplicação é: superior, direita, inferior e esquerda (de acordo com o movimento dos ponteiros do relógio).
+Link: https://developer.mozilla.org/pt-BR/docs/Web/CSS/padding
+
+>>> Box-Sizing:
+A propriedade CSS box-sizing é utilizada para alterar a propriedade padrão da box model, usada para calcular larguras (widths) e alturas (heights) dos elementos. É possível usar essa propriedade para emular o comportamento dos navegadores (browsers) que não suportam corretamente a especificação da propriedade CSS box model.
+Link: https://developer.mozilla.org/pt-BR/docs/Web/CSS/box-sizing
+
+*Estilizações Básicas com CSS*
+
+>> Cores:
+Use a Tag <style> para aplicar as cores
+
+>>> Cores Pré-Definidas:
+Aplica cores pela propriedade 'color:' por exemplo: 'color: red'; 'color: orange'; 'color: brown'; etc. Para ver o nome das cores veja o Link: https://www.w3schools.com/colors/colors_names.asp
+A palavra-chave currentcolor representa o valor calculado da propriedade color dos elementos . Ela permite que as propriedades de cor sejam herdadas por propriedades ou propriedades de elemento filho que não a herdam por padrão.
+
+>>> RGB e RGBA:
+Link: https://www.w3schools.com/css/css_colors_rgb.asp
+rgb possui três valores que são red ("r"), green ("g") e blue ("b") que vão de 0 até 255
+	>> exemplo: 'color: rgb(0 <- red -> 255, 0 <- green -> 255, 0 <- blue -> 255)'; 'color: rgb(0, 0, 0)' é a cor preta; 	            'color: rgb(255, 0, 0)' é a cor vermelha; 'color: rgb(0, 255, 0)' é a cor verde;
+		    'color: rgb(0, 0, 255)' é a cor azul; 'color: rgb(255, 255, 255)' é a cor branca.
+rgba possui um canal alpha ("a") que define a opacidade da cor
+	>> exemplo: 'color: rgba(0 <- red -> 255, 0 <- green -> 255, 0 <- blue -> 255, 0.0 <- alpha -> 1.0)';
+		    'color: rgba(0 <- red -> 255, 0 <- green -> 255, 0 <- blue -> 255, 0.0)' é totalmente transparente;
+		    'color: rgba(0 <- red -> 255, 0 <- green -> 255, 0 <- blue -> 255, 1.0)' é uma cor solida.
+
+>>> Hexadecimal:
+Link: https://www.w3schools.com/css/css_colors_hex.asp
+Hexadecimal possui seis dígitos e cada dígito segue o código hexadecimal que vai de 0 até f . E os dois primeiros dígitos são do valor red, os dois do meio são do valor green e os dois últimos são do valor blue
+	>> exemplo: 'color: #ff0000' é a cor vermelha; 'color: #00ff00' é a cor verde; 'color: #0000ff' é a cor azul;
+		    'color: #000000' é a cor preta; 'color: #ffffff' é a cor branca.
+Rara definir a transparência no hexadecimal basta adicionar no final um valor de 00 (totalmente transparente) até ff (cor solida)
+	>> exemplo: 'color: #0000ff00' é totalmente transparente; 'color: #0000ffff' é a cor solida.
+
+>>> HSL e HSLA:
+Link: https://www.w3schools.com/css/css_colors_hsl.asp
+
+>> Imagens:
+
+>>> Propriedade Object-Fit:
+Link: https://www.w3schools.com/css/css3_object-fit.asp
+
+>>> Propriedade Object-Position:
+Link:https://www.w3schools.com/css/css3_object-position.asp
+
+>> Fundo dos Elementos:
+
+>>> Alterando o Fundo dos Elementos:
+Para alterar o fundo dos elementos use a propriedade background
+	>> exemplo: 'background-image: url('../images/background.jpg'); 'background-image: linear-gradient('...') -> faz um efeito de degrade na vertical com duas ou mais cores; 'background-image: radial-gradient('...') -> faz um efeito de degrade em circulo com duas ou mais cores; etc.
+Para ver mais da prorpiedade background-image veja o Link: https://www.w3schools.com/cssref/pr_background-image.php
+Para ver mais padrões veja o Link: https://projects.verou.me/css3patterns/
+
+>>> Redimensionando as Imagens de Fundo dos Elementos:
+Link: https://www.w3schools.com/cssref/css3_pr_background-size.php
+
+>>> Repetição das Imagens de Fundo:
+Link: https://www.w3schools.com/cssref/pr_background-repeat.php
+
+>>> Posicionamento das Imagens de Fundo:
+Link: https://www.w3schools.com/cssref/pr_background-position.php ; 
+https://www.w3schools.com/cssref/css_pr_background-position-x.php ; 
+https://www.w3schools.com/cssref/css_pr_background-position-y.php
+
+>>> Propriedade Background Attachment:
+Link: https://www.w3schools.com/cssref/pr_background-attachment.php
+
+>>> Propriedade Background Origin:
+Link: https://www.w3schools.com/cssref/css3_pr_background-origin.php
+
+>>> Propriedade Background Clip:
+Link: https://www.w3schools.com/cssref/css3_pr_background-clip.php
+
+>>> Mesclagem:
+Link: https://www.w3schools.com/cssref/pr_background-blend-mode.php
+
+>>> Propriedade Background:
+Link: https://www.w3schools.com/cssref/css3_pr_background.php
+
+>> Bordas:
+
+>>> Tamanho da Borda:
+Link: https://www.w3schools.com/css/css_border_width.asp
+
+>>> Estilo da Borda:
+Link: https://www.w3schools.com/css/css_border.asp ; https://www.w3schools.com/css/css_border_shorthand.asp ; https://www.w3schools.com/css/css_border_sides.asp
+
+>>> Cor da Borda:
+Link: https://www.w3schools.com/css/css_border_color.asp
+
+>>> Propriedade Border:
+Link: https://www.w3schools.com/css/css_border.asp
+
+>>> Arredondando os Cantos com a Propriedade Border Radius:
+Link: https://www.w3schools.com/css/css_border_rounded.asp
+
+>>> Propriedade Border Image Source:
+Link: https://www.w3schools.com/cssref/css3_pr_border-image-source.php
+
+>>> Propriedade Border Image Slice:
+Link: https://www.w3schools.com/cssref/css3_pr_border-image-slice.php
+
+>>> Propriedade Border Image Width:
+Link: https://www.w3schools.com/cssref/css3_pr_border-image-width.php
+
+>>> Propriedade Border Image Repeat:
+Link: https://www.w3schools.com/cssref/css3_pr_border-image-repeat.php
+
+>>> Propriedade Border Image Outset:
+Link: https://www.w3schools.com/cssref/css3_pr_border-image-outset.php
+
+>> Fontes:
+
+>>> Onde Encontrar Fontes Personalizadas?:
+Link: https://fonts.google.com
+
+>>> Personalizando as Fontes do Nosso Site:
+Para personalizar as fontes do nosso site use a propriedade font
+
+>>> Aplicando Fontes Personalizadas com @Font-Face:
+Link: https://www.w3schools.com/cssref/css3_pr_font-face_rule.php
+
+>>> Aplicando Fontes Personalizadas com @import url():
+Link: https://www.w3schools.com/cssref/pr_import_rule.php
+
+>>> Alterando o Tamanho das Fontes com Font-Size:
+Link: https://www.w3schools.com/css/css_font_size.asp
+
+>>> Estilo de Fontes (Font-Style):
+Link: https://www.w3schools.com/css/css_font_style.asp
+
+>>> Espessura das Fontes com Font-Weight:
+Link: https://www.w3schools.com/cssref/pr_font_weight.php
+
+>>> Variação das Fontes com Font-Varint:
+Link: https://www.w3schools.com/cssref/pr_font_font-variant.php ; 
+https://www.w3schools.com/cssref/css3_pr_font-variant-caps.php
+
+>>> Propriedade Font-Stretch:
+Link: https://www.w3schools.com/cssref/css3_pr_font-stretch.php
+
+>>> Customizando a Altura da Linha com Line-Height:
+Link: https://www.w3schools.com/cssref/pr_dim_line-height.php
+
+>>> Propriedade Resumida Font:
+Link: https://www.w3schools.com/css/css_font.asp
+
+>> Textos:
+
+>>> Propriedade Text-Transform:
+Link: https://www.w3schools.com/cssref/pr_text_text-transform.php
+
+>>> Propriedade Text-Align:
+Link: https://www.w3schools.com/cssref/pr_text_text-align.php ; https://www.w3schools.com/cssref/css3_pr_text-align-last.php
+
+>>> Propriedade Text-Decoration:
+Link: https://www.w3schools.com/cssref/pr_text_text-decoration.php ; 
+https://www.w3schools.com/cssref/css3_pr_text-decoration-color.php ; 
+https://www.w3schools.com/cssref/css3_pr_text-decoration-line.php ; 
+https://www.w3schools.com/cssref/css3_pr_text-decoration-style.php ; 
+https://www.w3schools.com/cssref/pr_text_text-decoration-thickness.php
+
+>>> Propriedade Text-Indent:
+Link: https://www.w3schools.com/cssref/pr_text_text-indent.php#gsc.tab=0
+
+>>> Propriedades Letter-Spacing e Word-Spacing:
+Link: https://www.w3schools.com/cssref/pr_text_letter-spacing.php ; https://www.w3schools.com/cssref/pr_text_word-spacing.php
+
+>>> Propriedade White-Space:
+Link: https://www.w3schools.com/cssref/pr_text_white-space.php
+
+>>> Propriedade Word-Wrap:
+Link: https://www.w3schools.com/cssref/css3_pr_word-wrap.php
+
+>>> Propriedade Word-Break:
+Link: https://www.w3schools.com/cssref/css3_pr_word-break.php
+
+>>> Propriedade Writing-Mode:
+Link: https://www.w3schools.com/cssref/css3_pr_writing-mode.php
+
+>>> Propriedade Text-Overflow:
+Link: https://www.w3schools.com/cssref/css3_pr_text-overflow.php
+
+>> Sombras:
+
+>>> Efeito de Sombra nos Elementos:
+Link: https://www.w3schools.com/css/css3_shadows.asp ; https://www.w3schools.com/css/css3_shadows_box.asp
+
+>>> Efeito de Sombra nos Textos:
+Link: https://www.w3schools.com/cssref/css3_pr_text-shadow.php
+
+>> Outros:
+
+>>> Aplicando Transparência aos Elementos:
+Link: https://www.w3schools.com/css/css_image_transparency.asp
+
+>>> Propriedade Overflow:
+Link: https://www.w3schools.com/css/css_overflow.asp
+
+>>> Redefinindo as Propriedades Padrões dos Navegadores:
+Link: https://www.alura.com.br/artigos/o-que-e-reset-css

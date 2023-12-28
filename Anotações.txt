@@ -1,0 +1,8 @@
+Colavinte profile:
+https://github.com/digitalinnovationone/dio-lab-open-source/blob/main/community/Colavinte.md
+Farramentas do Desenvolvedor:
+	>> Google Chrome: F12, (Ctrl + Shift + C) e (Ctrl + Shift + I)
+	>> Mozilla Firefox: F12, (Ctrl + Shift + C) e (Ctrl + Shift + I)
+	>> Opera (todos os navegadores Opera): (Ctrl + Shift + C) e (Ctrl + Shift + I)
+	>> Safari: Em computadores Mac, o navegador Safari também oferece uma ferramenta para inspecionar elemento. No entanto, 		   há uma etapa adicional para acessá-la: você precisará habilitar Safari Developer Tools.
+		   Para fazer isso, vá até à barra de menus na parte superior da tela e siga para Safari > Preferências > 		   Avançado. Você pode marcar a caixa apropriada para habilitar as ferramentas do desenvolvedor. Uma vez 		   ativado, você pode acessar o recurso de inspecionar elementos como em outros navegadores. (Cmd + Option + I)

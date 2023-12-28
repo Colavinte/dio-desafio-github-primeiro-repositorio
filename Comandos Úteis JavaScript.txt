@@ -1,0 +1,5 @@
+JavaScript:
+Ctrl + Shift + ' -> abre o terminal no VS code
+https://developer.mozilla.org/pt-BR/docs/Learn/Getting_started_with_the_web/JavaScript_basics
+https://awari.com.br/os-principais-comandos-do-javascript-para-dominar-a-linguagem-de-programacao/?utm_source=blog&utm_campaign=projeto+blog&utm_medium=Os%20Principais%20Comandos%20Do%20Javascript%20Para%20Dominar%20A%20Linguagem%20De%20Programação
+https://www.w3schools.com/js/

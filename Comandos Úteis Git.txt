@@ -1,0 +1,9 @@
+Git:
+git help -> Ajuda
+git init -> Criar novo repositório
+git status -> Verificar estado dos arquivos/diretórios
+git add . -> Adicionar todos os arquivos/diretórios
+git commit -> Comitar arquivo/diretório
+git push -> Enviar arquivos/diretórios para o repositório remoto
+git pull -> Atualizar repositório local de acordo com o repositório remoto
+git clone -> Clonar um repositório remoto já existente

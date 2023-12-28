@@ -1,0 +1,176 @@
+HTML:
+Ctrl + s -> Salvar
+
+*Estrutura Básica do HTML*
+<html> -> Página/Site
+    <head> -> Cabeçalho
+	<title>Escreva o título aqui</title> -> Título
+    </head>
+    <body> -> Corpo
+        Corpo do site aqui
+    </body>
+</html>
+
+>> Tags:
+<Tag aberta></Tag fechada>
+<i></i> -> Deixa os textos em itálico
+<strong></strong> -> Deixa os textos em negrito e é usado para dar ênfase no HTML (é mais usado do que o <b>)
+<u></u> -> Sublinha o texto (underline)
+<mark></mark> -> Marca um texto como se fosse um marda texto
+<sup></sup> -> Usado para fazer um texto como por exemplo: 10²
+<sub></sub> -> Usado para fazer um texto na parte inferior da linha
+<input /> -> Cria inputs
+	>> exemplo: <input type="text" /> é um input de texto
+<img /> -> Cria imagens e necessita do atributo obrigatório src
+	>> exemplo: <img src = "arquivo.png ou indereço web" width="LARGURA" height="ALTURA" />
+<label></label> -> Representa uma legenda para um item em uma interface de usuário
+<br> -> Separa as linhas
+<b></b> -> Deixa os textos em negrito (igual a Tag <strong>)
+<font></font> -> Era utilizado no HTML4 para configurar o tipo, cor e tamanho das letras de um texto de uma página HTML. Não tendo suporte no HTML5 e para fazer as funções da antiga Tag <font> veja o link: https://www.w3schools.com/tags/tag_font.asp
+Para mais Tags veja o link: https://www.w3schools.com/tags/
+
+>> Atributos das Tags:
+<Tag Atributo="..."></Tag>
+id -> Identifica elementos
+style -> Serve para colocar comandos CSS
+	>> exemplo: <strong style="color: blue;">Meu primeiro HTML!<strong> (mudou a cor do texto)
+type -> Expecífico para a Tag input e pode ser "text", "number", "color", etc.
+Os atributos "on..." são eventos usados no JavaScript
+
+>> Textos:
+Definem o tamanho do título (podem ser usasdas mais de uma vez):
+[ <h1></h1> -> Maior valor hierárquico;
+  <h2></h2> -> Valor hierárquico menor que h1;
+  <h3></h3> -> Valor hierárquico menor que h2;
+  <h4></h4> -> Valor hierárquico menor que h3;
+  <h5></h5> -> Valor hierárquico menor que h4;
+  <h6></h6> -> Menor valor hierárquico. ]
+
+<p></p> -> Parágrafo
+<blockquote></blockquote> -> Usado para fazer uma citação
+
+>> Listas:
+Listas Ordenadas:
+<ol></ol> -> Lista ordenada (Tag "Pai")
+<li></li> -> Intem da lista ("Tag "Filha")
+	>>Exemplo:				| Resultado no Browser:
+		<ol>				| 
+		    <li>Item 1</li>		| 1. Item 1
+		    <li>Item 2</li>		| 2. Item 2
+		    <li>Item 3</li>		| 3. Item 3
+		    <li>			| 4.	
+			<ol>			|	
+			    <li>Item 3.1</li>	|	1. Item 3.1
+			    <li>Item 3.2</li>	|	2. Item 3.2
+			    <li>Item 3.3</li>	|	3. Item 3.3
+			</ol>			|
+		</ol>				| 
+
+Listas Não Ordenadas:
+<ul></ul> -> Lista não ordenada (Tag "Pai")
+<li></li> -> Intem da lista ("Tag "Filha")
+	>>Exemplo:				| Resultado no Browser:
+		<ul>				| 
+		    <li>Item 1</li>		| • Item 1
+		    <li>Item 2</li>		| • Item 2
+		    <li>Item 3</li>		| • Item 3
+		    <li>			| •	
+			<ul>			|	
+			    <li>Item 3.1</li>	|	• Item 3.1
+			    <li>Item 3.2</li>	|	• Item 3.2
+			    <li>Item 3.3</li>	|	• Item 3.3
+			</ul>			|
+		</ul>				| 
+Os marcadores (exemplo: "•" ) podem ser trocados pelo CSS
+
+>> Links:
+<a href="link do site">Nome/Palavra</a> -> "a" vem de anchor (âncora) e é usado junto do href para colocar links
+Pode mudar as características de como o link é exibido com o CSS
+<a href="link do site" target="_blank">Nome/Palavra</a> -> target="_blank" abre o link em outra guia
+<a href="link do site" target="_self">Nome/Palavra</a> -> target="_self" abre o link na mesma guia
+Os atributos target="_parent" e target="_top" são usadas para retrocompatibilidade
+<a href="link do site" title="Texto" target="_blank">Nome/Palavra</a> -> title é para colocar um Tooltip (balãozinho) que aparece quando passa o cursor por cima
+
+*Trabalhando com Formulários em HTML*
+
+>> Tag <form>:
+<form></form> -> É a Tag "Pai"
+name="" -> É o atributo usado para definir o nome do formulário
+target="_blank" -> Pode ser usado
+autocomplete="" -> Pode ser "on" ou "off" e se estiver como "on" vai salvar os dados para preencher automaticamente o contrário com o "off"
+onsubmit="" -> Você vai aplicar um código JavaScript em " "
+	>> exemplo: onsubmit="alert('Enviei o formulário');"
+method="get" -> Aparece os dados na URL ⚠ ☠ NÃO SEGURO PARA SENHAS!!! ☠ ⚠
+	>> exemplo: http://127.0.0.1:5500/index.html?name=Diogo&age=18&password=123456#
+method="post" -> Não aparece os dados na URL SEGURO PARA SENHAS!!! (melhor)
+action="" -> É o atributo usado para definir para onde o formulário vai ser enviado
+
+>> Tag <input /> e seus tipos:
+Alguns inputs poder não funcionar dependendo do navegador usado
+<input /> -> Cria inputs
+<input type="text" /> -> É um input de texto
+<input type="number" /> -> É um input de número que aceita os positivos e os negativos
+<input type="number" min="0" /> -> É um input de número que não tem números negativos (mínimo = 0)
+<input type="number" min="0" max="99" /> -> É um input de número com mínimo de 0 e máximo de 99
+<input type="number" min="0" step="5" max="99" /> -> É um input de número com mínimo de 0 e máximo de 99 que pula de 5 em 5
+<input type="range" /> -> É um input que cria um campo scroll e pode definir o min="", o max="" e o value="" (neste caso o valor inicial)
+<input type="color" /> -> É um input que cria um seletor de cores
+<input type="email" /> -> É um input para e-mail e tem problema com compatibilidade só aceitando se for um e-mail
+	>> exemplo: teste@teste.com.br
+<input type="url" /> -> É um input para URL
+	>> exemplo: http://127.0.0.1:5500/index.html
+<input type="date" /> -> É um input de data
+<input type="week" /> -> É um input para definir uma semana do ano
+	>> ⚠ ☠ ALERTA!!! ☠ ⚠ : O type="week" SÓ FUNCIONA NO GOOGLE CHROME E NO MICROSOFT EDGE!
+<input type="month" /> -> É um input para definir o mês
+	>> ⚠ ☠ ALERTA!!! ☠ ⚠ : O type="month" SÓ FUNCIONA NO GOOGLE CHROME!
+<input type="hidden" /> -> É um input que fica escondido no navagador
+<input type="file" /> -> É um input para enviar arquivo
+<input type="file" multiple /> -> É um input para enviar vários arquivos
+<input type="search" /> -> É um input para busca
+	>> ⚠ ☠ ALERTA!!! ☠ ⚠ : O type="search" SÓ FUNCIONA NO GOOGLE CHROME!
+<input type="button" value="Enviar" /> -> Recomendado usar a Tag <button> e seus tipos
+Para ver outros atributos da Tag <input /> veja o link: https://www.w3schools.com/tags/tag_input.asp
+
+>> Tag <input type="checkbox" /> e <input type="radio" />:
+<input type="checkbox" name="..." value="..." /> -> É um input de checkbox com um name="" e um value="" a ser definido
+<input type="radio" name="..." value="..." /> -> É um input parecido com uma checkbox, mas diferente do type="checkbox" que você pode selecionar múltiplas escolhas no type="radio" você só pode escolher uma opição (com um name="" e um value="" a ser definido)
+O atributo disable é usado para desabilitar a opição
+PS: No type="checkbox" o name="" pode ser igual (tendo que ter [] para indicar que é uma lista; exemplo: name="opcional[]"), mas o value="" tem que ser diferente. E no type="radio" o name="" tem que ser igual e o value="" diferente
+
+>> Tag <button> e seus tipos:
+<button></button> -> Cria um botão
+<button type="button"></button> -> É um botão comum que só terá função se você aplicar um JavaScript nele usando um dos atributos "on..."
+<button type="reset"></button> -> É um botão de reset que limpa os campos do form que ele esta incluido
+<button type="submit"></button> -> É um botão paraenviar o formulário e deve ser usado junto com o evento onsubmit do form
+Para ver outros atributos da Tag <button></button> veja o link: https://www.w3schools.com/tags/tag_button.asp
+
+>> Tag <select> e seus tipos:
+<select></select> -> cria uma selectbox
+<select name="..."></select> -> name="" define o nome da selectbox
+Usa a Tag "Filha" option junto com o atributo value="", os values tem que ser diferentes
+	>> exemplo: <option value="">Selecione o cargo</option>
+
+>> Tag <textarea>:
+<textarea></textarea> -> É uma caixa de texto com tamanho maleavel
+<textarea name="..."></textarea> -> O atributo name="" define o nome da textarea
+<textarea rows="..." name="..."></textarea> -> O atributo rows="" define a quantidade de linhas que a caixa de texto vai mostrar
+<textarea rows="..." cols="..." name="..."></textarea> -> O atributo cols="" define a quantidade de colunas que a caixa de texto vai mostrar
+
+*Estruturando seu HTML + Formatações*
+
+>> Tags <div> e <span>:
+<div></div> -> Link: https://www.w3schools.com/tags/tag_div.asp
+<span></span> -> Link: https://www.w3schools.com/tags/tag_span.asp
+
+>> Tag <fieldset>:
+<fieldset></fieldset> -> Link: https://www.w3schools.com/tags/tag_fieldset.asp
+
+>> Tag <embed>:
+<embed></embed> -> Link: https://www.w3schools.com/tags/tag_embed.asp
+
+>> Tag <iframe>:
+<iframe></iframe> -> Link: https://www.w3schools.com/tags/tag_iframe.asp
+
+>> Cores:
+Link: https://www.w3schools.com/colors/colors_names.asp
